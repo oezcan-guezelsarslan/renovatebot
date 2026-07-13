@@ -3,7 +3,7 @@ module.exports = {
     autodiscover: true,
     autodiscoverFilter: [
         'oezcan-guezelsarslan/*',
-       '!oezcan-guezelsarslan/renovatebot',
+        '!oezcan-guezelsarslan/renovatebot',
     ],
     requireConfig: 'optional',
     recreateWhen: 'always',
@@ -19,9 +19,11 @@ module.exports = {
         'artifactErrors'
     ],
 
+    // Global rules applied across all discovered repositories
     packageRules: [
         {
-            matchPackageNames: ['/.*/'],
+            // Matches absolutely all dependencies
+            matchPackagePatterns: ['*'],
             groupName: 'all_dependencies',
 
             // Force major, minor, patch, and pin updates into this same group
@@ -29,24 +31,8 @@ module.exports = {
             separateMinorPatch: false,
             separateMultipleMajor: false,
 
-            // Branch naming rules
-            branchPrefix: 'renovate/',
-            branchTopic: 'all_dependency',
-            branchNameStrict: true
+            // Branch topic definitions (Leave branchPrefix to global config scope)
+            branchTopic: 'all_dependency'
         }
-    ],
-
-    onboardingConfig: {
-        $schema: 'https://docs.renovatebot.com/renovate-schema.json',
-        extends: ['config:recommended'],
-        packageRules: [
-            {
-                matchPackageNames: ['/.*/'],
-                groupName: 'all_dependencies',
-                separateMajorMinor: false,
-                separateMinorPatch: false,
-                branchNameStrict: true
-            }
-        ]
-    }
+    ]
 };
