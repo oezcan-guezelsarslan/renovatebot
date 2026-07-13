@@ -1,6 +1,7 @@
 module.exports = {
     platform: 'github',
     autodiscover: true,
+    fetchReleaseNotes: "none",
     autodiscoverFilter: [
         'oezcan-guezelsarslan/*',
         '!oezcan-guezelsarslan/renovatebot',
