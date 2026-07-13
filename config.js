@@ -2,8 +2,8 @@ module.exports = {
     platform: 'github',
     autodiscover: true,
     autodiscoverFilter: [
-        'oezcanguezelarslan-arch/*',
- //      '!oezcanguezelarslan-arch/renovatebot',
+        'oezcan-guezelsarslan/*',
+       '!oezcan-guezelsarslan/renovatebot',
     ],
     requireConfig: 'optional',
     recreateWhen: 'always',
