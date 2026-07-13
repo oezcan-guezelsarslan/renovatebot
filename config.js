@@ -9,9 +9,6 @@ module.exports = {
     recreateWhen: 'always',
     branchPrefix: 'renovate/',
 
-    prHourlyLimit: 0,
-    prConcurrentLimit: 0,
-
     onboarding: false,
     dependencyDashboard: false,
 
