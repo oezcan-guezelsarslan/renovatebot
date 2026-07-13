@@ -24,7 +24,7 @@ jobs:
         env:
           RENOVATE_TOKEN: ${{ secrets.RENOVATE_TOKEN }}
           # Force verbose output so you see every network lookup
-          LOG_LEVEL: "debug"
+          LOG_LEVEL: "info"
           # Instruct Node to utilize up to 4GB RAM to process heavy Maven parsing safely
           NODE_OPTIONS: "--max-old-space-size=4096 --trace-warnings"
 
