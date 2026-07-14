@@ -23,6 +23,12 @@ jobs:
           token: ${{ secrets.RENOVATE_TOKEN }}
         env:
           RENOVATE_TOKEN: ${{ secrets.RENOVATE_TOKEN }}
+          env:
+          # Mapping your GitHub secrets to environment variables
+          #HARBOR_USER: ${{ secrets.HARBOR_USER }}
+          #HARBOR_PASSWORD: ${{ secrets.HARBOR_PASSWORD }}
+          #NEXUS_USER: ${{ secrets.NEXUS_USER }}
+          #NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWORD }}
           # Force verbose output so you see every network lookup
           LOG_LEVEL: "info"
           # Instruct Node to utilize up to 4GB RAM to process heavy Maven parsing safely
