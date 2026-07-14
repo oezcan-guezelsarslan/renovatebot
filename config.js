@@ -1,6 +1,7 @@
 module.exports = {
     platform: 'github',
     autodiscover: true,
+    prCreation: 'immediate',
     fetchReleaseNotes: "none",
     autodiscoverFilter: [
         'oezcan-guezelsarslan/*',
