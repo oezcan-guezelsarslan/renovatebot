@@ -19,6 +19,29 @@ module.exports = {
         'configErrorIssues',
         'artifactErrors'
     ],
+/*
+    // Repository settings
+    hostRules: [
+        {
+            hostType: 'docker',
+            matchHost: 'harbor.your-domain.com',
+            username: process.env.HARBOR_USER,
+            password: process.env.HARBOR_PASSWORD
+        },
+        {
+            hostType: 'maven',
+            matchHost: 'nexus.your-domain.com',
+            username: process.env.NEXUS_USER,
+            password: process.env.NEXUS_PASSWORD
+        },
+        {
+            hostType: 'npm',
+            matchHost: 'nexus.your-domain.com',
+            username: process.env.NEXUS_USER,
+            password: process.env.NEXUS_PASSWORD
+        }
+    ],
+ */   
 
     // Global rules applied across all discovered repositories
     packageRules: [
@@ -31,8 +54,6 @@ module.exports = {
             separateMajorMinor: false,
             separateMinorPatch: false,
             separateMultipleMajor: false,
-
-            // Branch topic definitions (Leave branchPrefix to global config scope)
             branchTopic: 'all_dependency'
         }
     ]
